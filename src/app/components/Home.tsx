@@ -1,9 +1,23 @@
 "use client"
 import React from 'react';
+import Head from 'next/head';
 
 export default function Home() {
 		return (
-			<section className="relative flex flex-col items-center justify-center min-h-screen px-0 pt-2 pb-8 md:pt-4 md:pb-12 animate-fade-in section-divider w-full overflow-hidden">
+			<>
+				<Head>
+					<title>PPL Biotech - High-Quality Allopathic and Ayurvedic Medicines</title>
+					<meta name="description" content="PPL Biotech, under Pumithila Pvt. Ltd., delivers high-quality Allopathic and Ayurvedic medicines to ensure accessible healthcare for all." />
+					<meta name="keywords" content="PPL Biotech, Pumithila Pvt. Ltd., Allopathic medicines, Ayurvedic medicines, healthcare solutions, pharmaceutical company, accessible healthcare" />
+					<meta name="author" content="PPL Biotech" />
+					<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+					<meta property="og:title" content="PPL Biotech - High-Quality Allopathic and Ayurvedic Medicines" />
+					<meta property="og:description" content="PPL Biotech, under Pumithila Pvt. Ltd., delivers high-quality Allopathic and Ayurvedic medicines to ensure accessible healthcare for all." />
+					<meta property="og:image" content="/logo.png" />
+					<meta property="og:url" content="https://www.pplbiotech.com" />
+					<meta name="twitter:card" content="summary_large_image" />
+				</Head>
+				<section className="relative flex flex-col items-center justify-center min-h-screen px-0 pt-2 pb-8 md:pt-4 md:pb-12 animate-fade-in section-divider w-full overflow-hidden">
 				{/* Animated Logo */}
 						<div className="mb-4 flex items-center justify-center w-full animate-bounce-in">
 							<img src="/logo.png" alt="PPL Biotech Logo" className="w-24 h-24 md:w-32 md:h-32 rounded-full shadow-lg border-4 border-primary mx-auto" />
@@ -128,6 +142,7 @@ export default function Home() {
 							}
 						`}</style>
 					</section>
+				</>
 				);
 // AnimatedStat component
 function AnimatedStat({ value, label }: { value: number; label: string }) {
