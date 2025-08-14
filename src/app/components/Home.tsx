@@ -37,7 +37,7 @@ export default function Home() {
 							</a>
 							<button
 								onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-								className="px-6 py-3 md:px-8 md:py-4 rounded-xl bg-accent text-primary font-bold shadow-lg hover:bg-primary hover:text-white transition-all duration-200 scale-100 hover:scale-105 border-2 border-accent hover:border-primary text-center w-full sm:w-auto"
+								className="px-6 py-3 md:px-8 md:py-4 rounded-xl bg-black text-white font-bold shadow-lg hover:bg-gray-800 hover:text-white transition-all duration-200 scale-100 hover:scale-105 border-2 border-black hover:border-gray-800 text-center w-full sm:w-auto"
 							>
 								📞 Contact Us
 							</button>

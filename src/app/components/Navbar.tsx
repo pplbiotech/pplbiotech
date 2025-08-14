@@ -11,8 +11,8 @@ const menuItems = [
 	{ name: 'Home', href: '#home' },
 	{ name: 'About Us', href: '#about' },
 	{ name: 'Products', href: '#products' },
-	{ name: 'Directors', href: '/directors' },
-	{ name: 'Contact Us', href: '/contact' },
+	{ name: 'Directors', href: '#directors' }, // Updated to scroll to the section
+	{ name: 'Contact Us', href: '#contact' }, // Updated to scroll to the contact form
 ];
 
 
