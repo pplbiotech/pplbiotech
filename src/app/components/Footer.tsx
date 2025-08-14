@@ -70,7 +70,7 @@ export default function Footer() {
               >
                 pplbiotechdev@gmail.com
               </motion.a></p>
-              <p className="mt-2">Phone: +1234567890</p>
+              <p className="mt-2">Phone: <a href="tel:+919560325360" className="hover:text-accent transition-colors">+91 95603 25360</a></p>
             </div>
           </motion.div>
 
