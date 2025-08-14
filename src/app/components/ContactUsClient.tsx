@@ -20,8 +20,8 @@ export default function ContactUsClient() {
   };
 
   return (
-  <section id="contact" className="w-full max-w-xl mx-auto py-10 px-4 flex flex-col items-center mb-32">
-      <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-8 text-primary">Contact Us</h2>
+    <section id="contact" className="w-full max-w-xl mx-auto py-10 px-4 sm:px-6 md:px-8 flex flex-col items-center mb-32">
+      <h2 className="text-5xl sm:text-6xl md:text-7xl font-extrabold mb-8 text-primary">Contact Us</h2>
       <div className="mb-6 w-full text-left">
         <div className="mb-2">📍 <b>Head Office:</b> 24/409, Trilokpuri, East Delhi, Delhi-110009</div>
         <div>📞 <b>Phone:</b> <a href="tel:+919560325360" className="text-blue-600 underline">+91 95603 25360</a></div>

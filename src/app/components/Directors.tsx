@@ -36,22 +36,29 @@ const directors = [
 export default function Directors() {
 
   return (
-    <section id="directors" className="w-full flex flex-col items-center justify-center py-10 md:py-20 px-2 sm:px-4 section-divider">
-      <h2 className="text-center mb-8 sm:mb-10">
-        <span className="block text-4xl sm:text-5xl md:text-6xl font-extrabold fancy-mission" style={{filter: 'brightness(1.15)'}}>
-          Our Directors
-        </span>
+    <section id="directors" className="w-full flex flex-col items-center justify-center py-10 md:py-20 px-4 sm:px-6 md:px-8 section-divider">
+      <h2 className="text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-8 sm:mb-10">
+        Our Directors
       </h2>
       <div className="w-full max-w-7xl pb-2 sm:pb-4">
         <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 w-full justify-center items-stretch">
           {directors.map((d, i) => (
             <div
               key={d.name}
-              className="w-full sm:min-w-[340px] sm:max-w-[420px] sm:w-[380px] bg-gradient-to-br from-[#e8f5e9] via-[#fffde7] to-[#e3f2fd] rounded-2xl sm:rounded-[2rem] shadow-2xl border-2 border-primary/20 flex flex-col items-stretch justify-center mx-auto hover:scale-105 transition-transform duration-300 overflow-hidden"
-              style={{minHeight: '520px', maxHeight: '900px', display: 'flex', flexDirection: 'column'}}
+              className="w-full sm:min-w-[340px] sm:max-w-[420px] sm:w-[380px] rounded-3xl shadow-lg border border-primary/30 flex flex-col items-stretch justify-center mx-auto hover:scale-105 transition-transform duration-300 overflow-hidden relative"
+              style={{
+                minHeight: '520px',
+                maxHeight: '900px',
+                display: 'flex',
+                flexDirection: 'column',
+                background: 'rgba(255, 255, 255, 0.15)',
+                backdropFilter: 'blur(10px)',
+                boxShadow: '0 10px 30px rgba(0, 0, 0, 0.15)',
+                border: '1px solid rgba(255, 255, 255, 0.3)',
+              }}
             >
               <div
-                className="w-full flex items-center justify-center"
+                className="w-full flex items-center justify-center relative group"
                 style={{
                   height: '320px',
                   minHeight: '220px',
@@ -59,42 +66,31 @@ export default function Directors() {
                   padding: '0.5rem 0 0.5rem 0',
                   marginTop:
                     typeof window !== 'undefined' && window.innerWidth <= 640
-                      ? (i === 0 ? '-18px' : i === 1 ? '-10px' : '0px')
+                      ? (i === 0 ? '-30px' : i === 1 ? '-10px' : '0px')
                       : '0px',
                 }}
               >
                 <img
                   src={d.img}
                   alt={d.name}
-                  className="w-[98%] h-full object-cover rounded-xl sm:rounded-[1.5rem]"
+                  className="w-[95%] h-full object-cover rounded-2xl transition-transform duration-300 group-hover:scale-110"
                   style={{
                     objectFit: 'cover',
                     height: '100%',
                     objectPosition:
                       typeof window !== 'undefined' && window.innerWidth <= 640
-                        ? (i === 0 ? 'top' : i === 1 ? 'top' : 'center')
+                        ? (i === 0 ? 'top 20%' : i === 1 ? 'top' : 'center')
                         : 'center',
                   }}
                 />
               </div>
-              <div style={{height: '18px', width: '100%'}} />
-              <div className="flex flex-col items-start justify-center w-full flex-1 p-4 sm:p-6 md:p-8" style={{minHeight: '220px', maxHeight: '390px'}}>
-                <div className="relative mb-2 w-full" style={{marginTop: 0, marginBottom: '1rem'}}>
-                  <span className="fancy-mission text-xl xs:text-2xl md:text-3xl lg:text-4xl font-bold drop-shadow-sm animate-glaze-name-soft relative z-10 block text-left" style={{whiteSpace: 'normal', wordBreak: 'break-word'}}>
-                    {d.name}
-                  </span>
-                </div>
-                <div className="text-base xs:text-lg md:text-xl font-extrabold text-primary bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-200 px-4 py-2 rounded-full mb-2 sm:mb-3 shadow-md w-full text-left">
-                  {d.title}
-                </div>
-                <ul className="list-disc list-inside text-sm xs:text-base md:text-lg text-gray-700 font-medium text-left mx-auto max-w-md space-y-2 w-full">
+              <div className="flex flex-col items-start justify-center w-full flex-1 p-6 sm:p-8" style={{ minHeight: '220px', maxHeight: '390px' }}>
+                <h3 className="text-2xl font-bold text-primary mb-2">{d.name}</h3>
+                <p className="text-lg font-semibold text-primary/80 mb-4">{d.title}</p>
+                <ul className="list-none space-y-2">
                   {d.highlights.map((h, idx) => (
-                    <li key={idx}>
-                      {h.split(/(\b(?:pharmaceutical|healthcare|quality control|R&D|production|pathology|Sales Representative|Area Manager|leader|communication|brand growth|Mass Communication|Journalism|B\.Sc\.|DMLT|B\.Pharma|Delhi University)\b)/gi).map((part, i) =>
-                        /^(pharmaceutical|healthcare|quality control|R&D|production|pathology|Sales Representative|Area Manager|leader|communication|brand growth|Mass Communication|Journalism|B\.Sc\.|DMLT|B\.Pharma|Delhi University)$/i.test(part)
-                          ? <span key={i} className="bg-yellow-300 text-primary font-bold px-1 rounded-md shadow-sm">{part}</span>
-                          : part
-                      )}
+                    <li key={idx} className="text-sm text-gray-700 font-medium">
+                      {h}
                     </li>
                   ))}
                 </ul>

@@ -17,13 +17,13 @@ export default function Home() {
 					<meta property="og:url" content="https://www.pplbiotech.com" />
 					<meta name="twitter:card" content="summary_large_image" />
 				</Head>
-				<section className="relative flex flex-col items-center justify-center min-h-screen px-0 pt-2 pb-8 md:pt-4 md:pb-12 animate-fade-in section-divider w-full overflow-hidden">
+				<section className="relative flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 md:px-8 pt-2 pb-8 md:pt-4 md:pb-12 animate-fade-in section-divider w-full overflow-hidden">
 				{/* Animated Logo */}
 						<div className="mb-4 flex items-center justify-center w-full animate-bounce-in">
 							<img src="/logo.png" alt="PPL Biotech Logo" className="w-24 h-24 md:w-32 md:h-32 rounded-full shadow-lg border-4 border-primary mx-auto" />
 						</div>
 				{/* Tagline */}
-						<h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 md:mb-6 text-primary text-center drop-shadow-lg animate-slide-down w-full">
+						<h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 md:mb-6 text-primary text-center drop-shadow-lg animate-slide-down w-full">
 							Welcome to PPL Biotech
 						</h1>
 						<p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-2 text-center w-full text-accent font-semibold animate-fade-in delay-200">
